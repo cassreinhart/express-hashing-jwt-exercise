@@ -1,13 +1,9 @@
 const express = require("express")
 const router = new express.Router();
-const ExpressError = require("../expressError")
-const db = require('../db');
+const ExpressError = require("../expressError");
 const User = require("../models/user");
-// const bcrypt = require('bcrypt')
-// const { BCRYPT_WORK_FACTOR, SECRET_KEY } = require("../config");
+const jwt = require('jsonwebtoken')
 const { SECRET_KEY } = require("../config");
-// const jwt = require('jsonwebtoken')
-const {ensureLoggedIn, ensureCorrectUser} = require('../middleware/auth')
 
 /** POST /login - login: {username, password} => {token}
  *
