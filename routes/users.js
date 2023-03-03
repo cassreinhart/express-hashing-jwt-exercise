@@ -1,5 +1,4 @@
 const express = require("express");
-const db = require("../db");
 
 const User = require("../models/user");
 const {ensureCorrectUser, ensureLoggedIn} = require('../middleware/auth')
