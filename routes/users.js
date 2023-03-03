@@ -1,8 +1,16 @@
+const express = require("express");
+const db = require("../db");
+
+const User = require("../models/user");
+
+const router = new express.Router();
+
 /** GET / - get list of users.
  *
  * => {users: [{username, first_name, last_name, phone}, ...]}
  *
  **/
+
 
 
 /** GET /:username - get detail of users.
